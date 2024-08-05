@@ -1,0 +1,6 @@
+##### CONSTRUCT RULES syntax : 
+
+[<type_1>|<type_2>|...]          ---> accept <type_1> or <type_2> or ... (union)
+<type_1>*                        ---> accept closure of <type_1>
+<type_1>+                        ---> accept at least one of <type_1> (no epsilon transition)
+<type_1>#                        ---> accept maximum of transitions

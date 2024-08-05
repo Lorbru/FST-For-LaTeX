@@ -1,0 +1,1094 @@
+{
+    "var_name": {
+        "a": [
+            "a"
+        ],
+        "b": [
+            "b"
+        ],
+        "c": [
+            "c"
+        ],
+        "d": [
+            "d"
+        ],
+        "e": [
+            "e"
+        ],
+        "f": [
+            "f"
+        ],
+        "g": [
+            "g"
+        ],
+        "h": [
+            "h"
+        ],
+        "i": [
+            "i"
+        ],
+        "j": [
+            "j"
+        ],
+        "k": [
+            "k"
+        ],
+        "l": [
+            "l"
+        ],
+        "m": [
+            "m"
+        ],
+        "n": [
+            "n"
+        ],
+        "o": [
+            "o"
+        ],
+        "p": [
+            "p"
+        ],
+        "q": [
+            "q"
+        ],
+        "r": [
+            "r"
+        ],
+        "s": [
+            "s"
+        ],
+        "t": [
+            "t"
+        ],
+        "u": [
+            "u"
+        ],
+        "v": [
+            "v"
+        ],
+        "w": [
+            "w"
+        ],
+        "x": [
+            "x"
+        ],
+        "y": [
+            "y"
+        ],
+        "z": [
+            "z"
+        ],
+        "A": [
+            "grand a"
+        ],
+        "B": [
+            "grand b"
+        ],
+        "C": [
+            "grand c"
+        ],
+        "D": [
+            "grand d"
+        ],
+        "E": [
+            "grand e"
+        ],
+        "F": [
+            "grand f"
+        ],
+        "G": [
+            "grand g"
+        ],
+        "H": [
+            "grand h"
+        ],
+        "I": [
+            "grand i"
+        ],
+        "J": [
+            "grand j"
+        ],
+        "K": [
+            "grand k"
+        ],
+        "L": [
+            "grand l"
+        ],
+        "M": [
+            "grand m"
+        ],
+        "N": [
+            "grand n"
+        ],
+        "O": [
+            "grand o"
+        ],
+        "P": [
+            "grand p"
+        ],
+        "Q": [
+            "grand q"
+        ],
+        "R": [
+            "grand r"
+        ],
+        "S": [
+            "grand s"
+        ],
+        "T": [
+            "grand t"
+        ],
+        "U": [
+            "grand u"
+        ],
+        "V": [
+            "grand v"
+        ],
+        "W": [
+            "grand w"
+        ],
+        "X": [
+            "grand x"
+        ],
+        "Y": [
+            "grand y"
+        ],
+        "Z": [
+            "grand z"
+        ],
+        "\\mathcal { A }": [
+            "a calligraphique"
+        ],
+        "\\mathcal { B }": [
+            "b calligraphique"
+        ],
+        "\\mathcal { C }": [
+            "c calligraphique"
+        ],
+        "\\mathcal { D }": [
+            "d calligraphique"
+        ],
+        "\\mathcal { E }": [
+            "e calligraphique"
+        ],
+        "\\mathcal { F }": [
+            "f calligraphique"
+        ],
+        "\\mathcal { G }": [
+            "g calligraphique"
+        ],
+        "\\mathcal { H }": [
+            "h calligraphique"
+        ],
+        "\\mathcal { I }": [
+            "i calligraphique"
+        ],
+        "\\mathcal { J }": [
+            "j calligraphique"
+        ],
+        "\\mathcal { K }": [
+            "k calligraphique"
+        ],
+        "\\mathcal { L }": [
+            "l calligraphique"
+        ],
+        "\\mathcal { M }": [
+            "m calligraphique"
+        ],
+        "\\mathcal { N }": [
+            "n calligraphique"
+        ],
+        "\\mathcal { O }": [
+            "o calligraphique"
+        ],
+        "\\mathcal { P }": [
+            "p calligraphique"
+        ],
+        "\\mathcal { Q }": [
+            "q calligraphique"
+        ],
+        "\\mathcal { R }": [
+            "r calligraphique"
+        ],
+        "\\mathcal { S }": [
+            "s calligraphique"
+        ],
+        "\\mathcal { T }": [
+            "t calligraphique"
+        ],
+        "\\mathcal { U }": [
+            "u calligraphique"
+        ],
+        "\\mathcal { V }": [
+            "v calligraphique"
+        ],
+        "\\mathcal { W }": [
+            "w calligraphique"
+        ],
+        "\\mathcal { X }": [
+            "x calligraphique"
+        ],
+        "\\mathcal { Y }": [
+            "y calligraphique"
+        ],
+        "\\mathcal { Z }": [
+            "z calligraphique"
+        ],
+        "\\mathbb { A }": [
+            "a double barre",
+            "a avec double barre",
+            "double barre a",
+            "black board a"
+        ],
+        "\\mathbb { B }": [
+            "b double barre",
+            "b avec double barre",
+            "double barre b",
+            "black board b"
+        ],
+        "\\mathbb { C }": [
+            "c double barre",
+            "c avec double barre",
+            "double barre c",
+            "black board c"
+        ],
+        "\\mathbb { D }": [
+            "d double barre",
+            "d avec double barre",
+            "double barre d",
+            "black board d"
+        ],
+        "\\mathbb { E }": [
+            "e double barre",
+            "e avec double barre",
+            "double barre e",
+            "black board e"
+        ],
+        "\\mathbb { F }": [
+            "f double barre",
+            "f avec double barre",
+            "double barre f",
+            "black board f"
+        ],
+        "\\mathbb { G }": [
+            "g double barre",
+            "g avec double barre",
+            "double barre g",
+            "black board g"
+        ],
+        "\\mathbb { H }": [
+            "h double barre",
+            "h avec double barre",
+            "double barre h",
+            "black board h"
+        ],
+        "\\mathbb { I }": [
+            "i double barre",
+            "i avec double barre",
+            "double barre i",
+            "black board i"
+        ],
+        "\\mathbb { J }": [
+            "j double barre",
+            "j avec double barre",
+            "double barre j",
+            "black board j"
+        ],
+        "\\mathbb { K }": [
+            "k double barre",
+            "k avec double barre",
+            "double barre k",
+            "black board k"
+        ],
+        "\\mathbb { L }": [
+            "l double barre",
+            "l avec double barre",
+            "double barre l",
+            "black board l"
+        ],
+        "\\mathbb { M }": [
+            "m double barre",
+            "m avec double barre",
+            "double barre m",
+            "black board m"
+        ],
+        "\\mathbb { N }": [
+            "n double barre",
+            "n avec double barre",
+            "double barre n",
+            "black board n"
+        ],
+        "\\mathbb { O }": [
+            "o double barre",
+            "o avec double barre",
+            "double barre o",
+            "black board o"
+        ],
+        "\\mathbb { P }": [
+            "p double barre",
+            "p avec double barre",
+            "double barre p",
+            "black board p"
+        ],
+        "\\mathbb { Q }": [
+            "q double barre",
+            "q avec double barre",
+            "double barre q",
+            "black board q"
+        ],
+        "\\mathbb { R }": [
+            "r double barre",
+            "r avec double barre",
+            "double barre r",
+            "black board r"
+        ],
+        "\\mathbb { S }": [
+            "s double barre",
+            "s avec double barre",
+            "double barre s",
+            "black board s"
+        ],
+        "\\mathbb { T }": [
+            "t double barre",
+            "t avec double barre",
+            "double barre t",
+            "black board t"
+        ],
+        "\\mathbb { U }": [
+            "u double barre",
+            "u avec double barre",
+            "double barre u",
+            "black board u"
+        ],
+        "\\mathbb { V }": [
+            "v double barre",
+            "v avec double barre",
+            "double barre v",
+            "black board v"
+        ],
+        "\\mathbb { W }": [
+            "w double barre",
+            "w avec double barre",
+            "double barre w",
+            "black board w"
+        ],
+        "\\mathbb { X }": [
+            "x double barre",
+            "x avec double barre",
+            "double barre x",
+            "black board x"
+        ],
+        "\\mathbb { Y }": [
+            "y double barre",
+            "y avec double barre",
+            "double barre y",
+            "black board y"
+        ],
+        "\\mathbb { Z }": [
+            "z double barre",
+            "z avec double barre",
+            "double barre z",
+            "black board z"
+        ],
+        "\\alpha": [
+            "alpha"
+        ],
+        "\\beta": [
+            "beta"
+        ],
+        "\\gamma": [
+            "gamma"
+        ],
+        "\\delta": [
+            "delta"
+        ],
+        "\\epsilon": [
+            "epsilon"
+        ],
+        "\\zeta": [
+            "zeta"
+        ],
+        "\\eta": [
+            "eta"
+        ],
+        "\\theta": [
+            "theta"
+        ],
+        "\\iota": [
+            "iota"
+        ],
+        "\\kappa": [
+            "kappa"
+        ],
+        "\\lambda": [
+            "lambda"
+        ],
+        "\\mu": [
+            "mu"
+        ],
+        "\\nu": [
+            "nu"
+        ],
+        "\\xi": [
+            "xi",
+            "ksi"
+        ],
+        "\\pi": [
+            "pi"
+        ],
+        "\\rho": [
+            "rho"
+        ],
+        "\\sigma": [
+            "sigma"
+        ],
+        "\\tau": [
+            "tau"
+        ],
+        "\\upsilon": [
+            "upsilon"
+        ],
+        "\\phi": [
+            "phi"
+        ],
+        "\\chi": [
+            "chi",
+            "khi"
+        ],
+        "\\psi": [
+            "psi"
+        ],
+        "\\omega": [
+            "omega"
+        ],
+        "\\Gamma": [
+            "grand gamma"
+        ],
+        "\\Delta": [
+            "grand delta"
+        ],
+        "\\Theta": [
+            "grand theta"
+        ],
+        "\\Lambda": [
+            "grand lambda"
+        ],
+        "\\Xi": [
+            "grand xi",
+            "grand ksi"
+        ],
+        "\\Pi": [
+            "grand pi"
+        ],
+        "\\Sigma": [
+            "grand sigma"
+        ],
+        "\\Phi": [
+            "grand phi"
+        ],
+        "\\Omega": [
+            "grand omega"
+        ],
+        "\\varepsilon": [
+            "varepsilon",
+            "var epsilon"
+        ],
+        "\\varpi": [
+            "varpi",
+            "var pi"
+        ],
+        "\\varrho": [
+            "varrho",
+            "var rho"
+        ],
+        "\\varsigma": [
+            "varsigma",
+            "var sigma"
+        ]
+    },
+    "digit": {
+        "0": [
+            "zero",
+            "0"
+        ],
+        "1": [
+            "un",
+            "1"
+        ],
+        "2": [
+            "deux",
+            "2"
+        ],
+        "3": [
+            "trois",
+            "3"
+        ],
+        "4": [
+            "quatre",
+            "4"
+        ],
+        "5": [
+            "cinq",
+            "5"
+        ],
+        "6": [
+            "six",
+            "6"
+        ],
+        "7": [
+            "sept",
+            "7"
+        ],
+        "8": [
+            "huit",
+            "8"
+        ],
+        "9": [
+            "neuf",
+            "9"
+        ]
+    },
+    "infty": {
+        "\\infty": [
+            "infini"
+        ]
+    },
+    "sets": {
+        "\\mathbb { N }": [
+            "entiers naturels",
+            "ensemble des entiers naturels",
+            "ensemble grand n"
+        ],
+        "\\mathbb { Z }": [
+            "entiers relatifs",
+            "ensemble des entiers relatifs",
+            "ensemble grand z"
+        ],
+        "\\mathbb { Q }": [
+            "rationnels",
+            "ensemble des rationnels",
+            "ensemble rationnel",
+            "ensemble grand q"
+        ],
+        "\\mathbb { R }": [
+            "reel",
+            "ensemble des reels",
+            "ensemble reel",
+            "ensemble grand r"
+        ],
+        "\\mathbb { C }": [
+            "complexe",
+            "ensemble des complexes",
+            "ensemble complexe",
+            "ensemble grand c"
+        ]
+    },
+    "rel": {
+        ">": [
+            "plus grand",
+            "superieur",
+            "plus grand que",
+            "superieur \u00e0"
+        ],
+        "\\geq": [
+            "plus grand ou egal",
+            "superieur ou egal",
+            "plus grand ou egal \u00e0",
+            "superieur ou egal \u00e0"
+        ],
+        "<": [
+            "plus petit",
+            "inferieur",
+            "plus petit que",
+            "inferieur \u00e0"
+        ],
+        "\\leq": [
+            "plus petit ou egal",
+            "inferieur ou egal",
+            "plus petit ou egal \u00e0",
+            "inferieur ou egal \u00e0"
+        ],
+        "=": [
+            "egal",
+            "egal \u00e0"
+        ],
+        "\\neq": [
+            "different",
+            "different de"
+        ],
+        "\\simeq": [
+            "environ egal",
+            "environ egal \u00e0",
+            "isomorphe",
+            "isomorphe \u00e0"
+        ],
+        "\\propto": [
+            "proportionnel",
+            "proportionnel \u00e0"
+        ],
+        "\\sim": [
+            "suit"
+        ],
+        "\\in": [
+            "appartient",
+            "appartient \u00e0",
+            "dans"
+        ],
+        "\\notin": [
+            "appartient pas",
+            "appartient pas \u00e0"
+        ],
+        "\\subset": [
+            "inclu",
+            "inclu dans"
+        ],
+        "\\subseteq": [
+            "inclu ou egal",
+            "inclu ou egal \u00e0"
+        ],
+        "\\not\\subset": [
+            "pas inclu",
+            "pas inclu dans",
+            "non inclu",
+            "non inclu dans"
+        ],
+        "\\not\\subseteq": [
+            "pas inclu ou egal",
+            "non inclu ou egal",
+            "pas inclu ou egal \u00e0",
+            "non inclu ou egal \u00e0"
+        ],
+        "\\Rightarrow": [
+            "implique"
+        ],
+        "\\Leftrightarrow": [
+            "equivalent"
+        ],
+        "\\rightarrow": [
+            "fleche"
+        ],
+        "\\longrightarrow": [
+            "longue fleche",
+            "tend vers"
+        ],
+        "\\overset { L } { \\longrightarrow }": [
+            "converge en loi"
+        ],
+        "\\overset { \\mathbb { P } } { \\longrightarrow }": [
+            "converge en probabilite"
+        ],
+        "\\quad": [
+            "espace"
+        ]
+    },
+    "quantif": {
+        "\\forall": [
+            "pour tout"
+        ],
+        "\\exists": [
+            "existe"
+        ],
+        "\\exists !": [
+            "existe un unique",
+            "existe unique"
+        ]
+    },
+    "un_op": {
+        "-": [
+            "moins"
+        ],
+        "\\neg": [
+            "non",
+            "negation",
+            "negation de"
+        ],
+        "\\partial": [
+            "d rond",
+            "d rond de",
+            "derivee partielle",
+            "derivee partielle de"
+        ],
+        "\\nabla": [
+            "gradient",
+            "gradient de"
+        ]
+    },
+    "bin_op": {
+        "+": [
+            "plus"
+        ],
+        "-": [
+            "moins"
+        ],
+        ".": [
+            "point",
+            "scalaire"
+        ],
+        "\\circ": [
+            "rond"
+        ],
+        "\\cup": [
+            "union"
+        ],
+        "\\cap": [
+            "inter"
+        ],
+        "\\times": [
+            "croix"
+        ],
+        "\\otimes": [
+            "tenseur",
+            "produit tensoriel",
+            "croix rond"
+        ],
+        "\\oplus": [
+            "somme directe",
+            "plus rond"
+        ],
+        "\\setminus": [
+            "prive",
+            "prive de"
+        ],
+        "\\vee": [
+            "ou"
+        ],
+        "\\wedge": [
+            "et"
+        ]
+    },
+    "subscript": {
+        "_": [
+            "indice"
+        ]
+    },
+    "supscript": {
+        "^": [
+            "exposant",
+            "puissance"
+        ]
+    },
+    "func_names": {
+        "\\min": [
+            "minimum",
+            "min"
+        ],
+        "\\max": [
+            "maximum",
+            "max"
+        ],
+        "\\exp": [
+            "exponentielle",
+            "exp"
+        ],
+        "\\log": [
+            "logarithme",
+            "log"
+        ],
+        "\\cos": [
+            "cosinus",
+            "cos"
+        ],
+        "\\arccos": [
+            "arccosinus",
+            "arc cosinus",
+            "arccos",
+            "arc cos"
+        ],
+        "\\arcsin": [
+            "arcsinus",
+            "arc sinus",
+            "arcsin",
+            "arc sin"
+        ],
+        "\\arctan": [
+            "arctangente",
+            "arc tangente",
+            "arctan",
+            "arc tan"
+        ],
+        "\\deg": [
+            "deg",
+            "degre"
+        ],
+        "\\dim": [
+            "dim",
+            "dimension"
+        ],
+        "\\det": [
+            "det",
+            "determinant"
+        ],
+        "\\lVert": [
+            "norme"
+        ],
+        "\\mathrm { Re }": [
+            "partie relle"
+        ],
+        "\\mathrn { Im }": [
+            "partie imaginaire"
+        ],
+        "\\mathbb { P }": [
+            "probabilite"
+        ],
+        "\\mathbb { E }": [
+            "esperance"
+        ],
+        "\\mathbb { V }": [
+            "variance"
+        ],
+        "\\mathrm { Ber }": [
+            "bernoulli",
+            "ber"
+        ],
+        "\\mathrm { Bin }": [
+            "binomiale",
+            "bin"
+        ],
+        "\\mathcal { G }": [
+            "loi geometrique"
+        ],
+        "\\mathcal { H }": [
+            "loi hypergeometrique"
+        ],
+        "\\mathcal { P }": [
+            "loi de poisson"
+        ],
+        "\\mathcal { N }": [
+            "loi normale"
+        ],
+        "\\mathcal { E }": [
+            "loi exponentielle"
+        ],
+        "\\Gamma": [
+            "loi gamma"
+        ],
+        "\\chi ^ 2": [
+            "chi deux",
+            "khi deux"
+        ],
+        "\\mathcal { T }": [
+            "loi de student"
+        ]
+    },
+    "iter": {
+        "\\sup": [
+            "sup",
+            "borne superieure"
+        ],
+        "\\inf": [
+            "inf",
+            "borne inferieure"
+        ],
+        "\\lim": [
+            "lim",
+            "limite"
+        ],
+        "\\bigotimes": [
+            "le produit tensoriel"
+        ],
+        "\\bigoplus": [
+            "la somme directe"
+        ],
+        "\\bigcup": [
+            "l' union"
+        ],
+        "\\bigcap": [
+            "l' intersection"
+        ],
+        "\\sum": [
+            "somme"
+        ],
+        "\\prod": [
+            "produit"
+        ],
+        "\\int": [
+            "integrale"
+        ],
+        "\\mathrm { argmin }": [
+            "argmin",
+            "arg min",
+            "minimiseur"
+        ],
+        "\\mathrm { argmax }": [
+            "argmax",
+            "arg max",
+            "maximiseur"
+        ]
+    },
+    "func_cseq": {
+        "\\frac": [
+            "fraction",
+            "rapport"
+        ],
+        "\\sqrt": [
+            "racine"
+        ],
+        "\\binom": [
+            "binomial",
+            "coefficient binomial"
+        ]
+    },
+    "symb": {
+        ":": [
+            "deux points",
+            "tel que"
+        ],
+        "\\dots": [
+            "trois points",
+            "trois petits points"
+        ],
+        ",": [
+            "virgule"
+        ],
+        "'": [
+            "apostrophe",
+            "prime"
+        ],
+        "^ *": [
+            "etoile",
+            "star"
+        ],
+        "!": [
+            "point d' exclamation",
+            "factoriel"
+        ],
+        "?": [
+            "point d' interrogation"
+        ],
+        "\\%": [
+            "pourcent",
+            "pour cent"
+        ],
+        "\\vert": [
+            "conditionellement",
+            "barre verticale"
+        ],
+        "\\text { resp. }": [
+            "respectivement"
+        ]
+    },
+    "math_cseq": {
+        "(": [
+            "parenthese"
+        ],
+        ")": [
+            "fermer la parenthese",
+            "fermer parenthese",
+            "parenthese fermante",
+            "fin de parenthese",
+            "fin parenthese"
+        ],
+        "[": [
+            "crochet"
+        ],
+        "]": [
+            "fermer le crochet",
+            "fermer crochet",
+            "crochet fermant",
+            "fin de crochet",
+            "fin crochet"
+        ],
+        "\\{": [
+            "ensemble"
+        ],
+        "\\}": [
+            "fermer l' ensemble",
+            "fermer ensemble",
+            "fin de l' ensemble",
+            "fin ensemble"
+        ]
+    },
+    "tex_cseq": {
+        "{": [
+            "accolade"
+        ],
+        "}": [
+            "fermer l' accolade",
+            "fermer accolade",
+            "accolade fermante",
+            "fin de l' accolade",
+            "fin accolade"
+        ]
+    },
+    "natural_expr": {
+        "\\geq 0": [
+            "positif"
+        ],
+        "> 0": [
+            "strictement positif"
+        ],
+        "\\leq 0": [
+            "negatif"
+        ],
+        "< 0": [
+            "strictement negatif"
+        ],
+        ": =": [
+            "egal par definition",
+            "defini par"
+        ],
+        "\\mathbb { N } ^ *": [
+            "entier strictement positif",
+            "entier naturel non nul"
+        ],
+        "\\mathbb { Z } ^ *": [
+            "entier non nul",
+            "relatif non nul"
+        ],
+        "\\mathbb { R } ^ +": [
+            "ensemble des reels positifs",
+            "reel positif"
+        ],
+        "\\mathbb { R } ^ -": [
+            "ensemble des reels negatifs",
+            "reel negatif"
+        ],
+        "\\mathbb { R } ^ + _ *": [
+            "ensemble des reels strictement positifs",
+            "ensemble des reels positifs non nuls",
+            "r plus etoile",
+            "reel strictement positif",
+            "reel positif non nul"
+        ],
+        "\\mathbb { R } ^ - _ *": [
+            "ensemble des reels strictement negatifs",
+            "ensemble des reels negatifs non nuls",
+            "r moins etoile",
+            "reel strictement negatif",
+            "reel negatif non nul"
+        ],
+        "\\mathcal { N } ( 0 , 1 )": [
+            "loi normale centree reduite",
+            "loi standard",
+            "loi n zero un"
+        ]
+    },
+    "key_seq": {
+        "pour": [
+            "pour"
+        ],
+        "allant_de": [
+            "allant de"
+        ],
+        "\u00e0": [
+            "\u00e0"
+        ],
+        "de": [
+            "de"
+        ],
+        "sur": [
+            "sur"
+        ],
+        "tout_sur": [
+            "le tout sur",
+            "tout sur"
+        ],
+        "facteur_de": [
+            "facteur de"
+        ],
+        "tout_facteur_de": [
+            "le tout facteur de",
+            "tout facteur de"
+        ]
+    }
+}

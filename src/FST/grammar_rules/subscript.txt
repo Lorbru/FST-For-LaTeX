@@ -1,0 +1,3 @@
+[var_name] [digit]+;[var_name] _ { [digit]+ };
+[var_name] _ [digit]+;[var_name] _ { [digit]+ };
+[var_name] ^ [digit]+;[var_name] ^ { [digit]+ };

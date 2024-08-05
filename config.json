@@ -1,0 +1,23 @@
+{
+    "ASR_config":{
+
+        "whisper_size":"medium",
+        "whisper_lang":"fr" 
+
+    },
+
+    "FST_config":{
+
+        "null_token":"<e>",
+        "space_token":"<s>",
+        "complete_token":"<t>",
+        "encoding":"utf-8",
+        
+        "normalizer":true,
+        "lemmatizer":true,
+        "grammar":true
+
+    }
+
+
+}
