@@ -9,7 +9,7 @@ def test():
 
     print("Loading transducer :")
     t = time.time()
-    fst = FullTransducer()
+    fst = LexMathTransducer()
     print(f'    >> Done : {time.time() - t}s')
 
     i = input("sentence | break : ")

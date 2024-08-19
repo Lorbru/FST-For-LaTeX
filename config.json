@@ -11,6 +11,8 @@
         "null_token":"<e>",
         "space_token":"<s>",
         "complete_token":"<t>",
+        "eof":"<EOF>",
+        "bof":"<BOF>",
         "encoding":"utf-8",
         
         "normalizer":true,

@@ -1,12 +1,22 @@
 INPUT;OUTPUT;
+[var|num] ^ [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[var|num] ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[var|num] _ [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[var|num] _ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
 [var] [num]+;[var] _ { [num]+ };
-_ [num]+;_ { [num]+ };
-^ [num]+;^ { [num]+ };
-_ [var] _ [var];_ { [var] _ { [var] } };
-_ [var] _ [num]+;_ { [var] _ { [num]+ } };
-_ [var] [num]+;_ { [var] _ { [num]+ } };
-^ [num]+ ^ [num]+;^ { [num]+ ^ { [num]+ } };
-\forall [var] [set];\forall [var] \in [set];
-\exists ! [var] [set];\exists ! [var] \in [set];
-\exists [var] [set];\exists [var] \in [set];
-\sum pour [math]
+[fun|var] de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[fun|var] ( [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* );
+[fun] [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[fun] ( [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* );
+[qtf] [var] [set];[qtf] [var] \in [set] , \quad;
+[\sum|\prod] pour [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* de;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] pour [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] de [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* de;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] de [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] pour [var] allant_de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* de;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] pour [var] allant_de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] de [var] allant_de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* de;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[\sum|\prod] de [var] allant_de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;[\sum|\prod] \limits _ { [var] = [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+\int de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* de;\int _ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* }
+\int allant_de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* à [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* de;\int _ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } ^ { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };
+[iter] pour [var|num|symb|set|rel]+ de;[iter] \limits _ {  [var|num|symb|set|rel]+ };
+[iter] pour [var] \in [set];[iter] \limits _ { [var] \in [set] };
+[iter] sur [set];[iter] _ { [set] };
+\lVert de [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;\lVert [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* \rVert;
+[uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* sur [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]*;\frac { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* } { [uop]? [[num|var|infty]+] [[bop|[symb]+][[num|var|infty]+]]* };

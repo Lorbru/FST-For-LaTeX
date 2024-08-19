@@ -1,0 +1,5 @@
+INPUT;OUTPUT;ADD_IN;
+[fun|var|decvar] de [uop]? [[num|var|decvar|infty|olexpr|supexpr|subexpr]+] [[bop|[symb]+][[num|var|decvar|infty|olexpr|supexpr|subexpr]+]]*;[fun|var|decvar] ( [uop]? [[num|var|decvar|infty|olexpr|supexpr|subexpr]+] [[bop|[symb]+][[num|var|decvar|infty|olexpr|supexpr|subexpr]+]]* );funexpr;
+[fun] [uop]? [[num|var|decvar|infty|olexpr|supexpr|subexpr]+] [[bop|[symb]+][[num|var|decvar|infty|olexpr|supexpr|subexpr]+]]*;[fun] ( [uop]? [[num|var|decvar|infty|olexpr|supexpr|subexpr]+] [[bop|[symb]+][[num|var|decvar|infty|olexpr|supexpr|subexpr]+]]* );funexpr;
+[qtf] [var|decvar] [set] :;[qtf] [var|decvar] \in [set] :;qtfexpr;
+[qtf] [var|decvar] [set];[qtf] [var|decvar] \in [set] ,;qtfexpr;
