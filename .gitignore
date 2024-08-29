@@ -2,3 +2,4 @@
 /.conda
 /csv
 /wav2vec2_checkpoint
+audio.wav

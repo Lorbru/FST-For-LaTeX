@@ -1,4 +1,4 @@
-from transformers import WhisperProcessor, WhisperForConditionalGeneration, WhisperConfig
+from transformers import WhisperProcessor, WhisperForConditionalGeneration
 from transformers import AutoModelForCTC, Wav2Vec2ProcessorWithLM
 from src.FST.transducers import Normalizer
 

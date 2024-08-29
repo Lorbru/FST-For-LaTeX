@@ -4,7 +4,7 @@ import os
 import time
 
 from audiorecorder import audiorecorder
-import whisper
+from src.ASR.ASRModels import *
 from src.FST.transducers import *
 
 
@@ -29,7 +29,7 @@ st.write("___")
 st.subheader(":orange[Configuration]")
 
 def load_model(model_type:str):
-    return whisper.load_model(model_type)
+    return OpAI_WhisperModel(model_type, 'fr')
   
 st.write(":red[whisper config]")
 
@@ -77,7 +77,7 @@ if len(audio) > 0:
 
     if FST != None and st.session_state.model != None :
 
-        transcript = st.session_state.model.transcribe('audio.wav')['text']
+        transcript = st.session_state.model.predict('audio.wav')
         
         if select_transducer == 'lex' : 
 
