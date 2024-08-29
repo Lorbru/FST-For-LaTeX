@@ -1,4 +1,5 @@
 INPUT;OUTPUT;ADD_IN;
-[var] chapeau;\hat { [var] };decvar;
-[var] tilde;\tilde { [var] };decvar;
-vecteur [var];\vec { [var] };decvar;
+[var] <hat>;\hat { [var] };decvar;
+[var] <tilde>;\tilde { [var] };decvar;
+<vec> [var];\vec { [var] };decvar;
+[var] <^*>;[var] ^ *;decvar;

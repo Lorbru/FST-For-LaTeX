@@ -4,19 +4,26 @@ import time
 
 
 
-def test():
-    
+def main():
 
-    print("Loading transducer :")
+    typ = input('FST : [tex|gram|gram4] : ')
+    while(not typ in ['tex', 'gram', 'gram4']) : 
+        print('   > Invalid')
+        typ =  input('FST : [tex|gram|gram4]')
+
+    print("Construct transducer")
     t = time.time()
-    fst = LexMathTransducer()
+    if typ == 'tex' : fst = LexMathTransducer()
+    elif typ == 'gram' : fst = LexGraOneLayerFST()
+    elif typ == 'gram4' : fst = LexGraMultiLayerFST()
     print(f'    >> Done : {time.time() - t}s')
 
     i = input("sentence | break : ")
     while (i != 'break'):
-        print(fst.outputs(i))
+        print(fst.predict(i))
         i = input("sentence | break : ")
 
 
 
-test()
+if __name__ == '__main__':
+    main()

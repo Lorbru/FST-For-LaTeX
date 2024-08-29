@@ -1,12 +1,14 @@
 import pynini
 import pandas as pd
 import json
+import numpy as np
 
-### ENCODING PARAMETERS
+### ENCODING PARAMETERS AND CONTROL TOKENS
 ENCODING       = 'utf-8'
 NULL_TOKEN     = '<e>'
 SPACE_TOKEN    = '<s>'
 COMPLETE_TOKEN = '<t>'
+EOF = '#<EOF>'
 
 ### TOKEN + GRAMMAR FILES
 LETTERS_FILE_PATH            = "src/FST/tokens/letters.json"
@@ -25,7 +27,7 @@ LEMMATIZER_RULE_FILE         = "src/FST/rules/Lemmatizer/lemmatizer.txt"
 
 # Lexical transducer
 MATH_LEX_RULE_FILE           = "src/FST/rules/LexicalRules/math_rules.txt"
-MATH_LEX_KSEQ_RULE_FILE      = "src/FST/rules/LexicalRules/math_rules_keyseq.txt"
+MATH_LEX_KSEQ_RULE_FILE      = "src/FST/rules/LexicalRules/math_rules_grammarkeys.txt"
 
 
 # Grammar transducer (one layer)
@@ -38,6 +40,8 @@ MATH_GRA_LAYERS = [
     "src/FST/rules/GrammarRules/layer3.txt",
     "src/FST/rules/GrammarRules/layer4.txt"
 ]
+
+CORRECT_GRA_LAYER = "src/FST/rules/GrammarRules/correction.txt"
 
 
 with open(LETTERS_FILE_PATH, 'r', encoding=ENCODING) as reader :
@@ -94,21 +98,25 @@ def build_tex_acceptor(tex_symbol_primitive_types):
 GRAMMAR_ACC = {
 
     "all":Sig_seq_acc,
-    "var":build_tex_acceptor(['var_name']).optimize(),
-    "num":build_tex_acceptor(['digit']).optimize(),
+    "var":build_tex_acceptor(['var']).optimize(),
+    "num":build_tex_acceptor(['num']).optimize(),
     "infty":build_tex_acceptor(['infty']).optimize(),
-    "set":build_tex_acceptor(['sets']).optimize(),
+    "set":build_tex_acceptor(['set']).optimize(),
     "rel":build_tex_acceptor(['rel']).optimize(),
+    "qtf":build_tex_acceptor(['qtf']).optimize(),
+    "uop":build_tex_acceptor(['uop']).optimize(),
+    "bop":build_tex_acceptor(['bop']).optimize(),
+    "sub":build_tex_acceptor(['sub']).optimize(),
+    "sup":build_tex_acceptor(['sup']).optimize(),
+    "fun":build_tex_acceptor(['fun']).optimize(),
+    "specfun":build_tex_acceptor(['specfun']).optimize(),
+    "setfun":build_tex_acceptor(['setfun']).optimize(),
+    "law1":build_tex_acceptor(['law1']).optimize(),
+    "law2":build_tex_acceptor(['law2']).optimize(),
     "iter":build_tex_acceptor(['iter']).optimize(),
-    "mseq":build_tex_acceptor(['math_cseq']).optimize(),
-    "qtf":build_tex_acceptor(['quantif']).optimize(),
-    "uop":build_tex_acceptor(['un_op']).optimize(),
-    "bop":build_tex_acceptor(['bin_op']).optimize(),
-    "sub":build_tex_acceptor(['subscript']).optimize(),
-    "sup":build_tex_acceptor(['supscript']).optimize(),
-    "fun":build_tex_acceptor(['func_names']).optimize(),
-    "fun_cseq":build_tex_acceptor(['func_cseq']).optimize(),
-    "symb":build_tex_acceptor(['symb']).optimize(),
+    "symb":build_tex_acceptor(['symb']).optimize(),  
+    "mseq":build_tex_acceptor(['mseq']).optimize(),
+    "gram":build_tex_acceptor(['grammar_keywords']).optimize()
 
 }
 
@@ -204,7 +212,10 @@ class RulesTransducer():
         symbols = self.get_input_symbol_list(input_string)
         acc = pynini.accep(NULL_TOKEN, token_type=self.__input_tokens)
         for s in symbols : 
-            acc = pynini.concat(acc, pynini.accep(s, token_type = self.__input_tokens))
+            try : 
+                acc = pynini.concat(acc, pynini.accep(s, token_type = self.__input_tokens))
+            except Exception as e :
+                raise Exception(f"ERROR : symbol { s } is not defined")
         return acc.optimize()
 
     def get_input_symbol_list(self, string:str):
@@ -396,18 +407,10 @@ class LexMathTransducer():
     def normalized_sequence(self, input_string:str):
         return self.__lemmatizer.predict(self.__normalizer.predict(input_string))
 
-    def predict(self, input_string:str, trace=False):
-        
+    def predict(self, input_string:str):
         if self.__normalize_rules : input_string = self.__normalizer.predict(input_string)
-        if trace : print(f"  >> norm = [{input_string}]")
-        
         if self.__lemmatize_rules : input_string = self.__lemmatizer.predict(input_string)
-        if trace : print(f"  >> lemm = [{input_string}]")
-        
-        input_string = self.__lexmathfst.predict(input_string)
-        if trace : print(f"  >> math = [{input_string}]")
-        
-        return input_string
+        return self.__lexmathfst.predict(input_string)
 
 class TexNormalizer():
 
@@ -424,6 +427,8 @@ class TexNormalizer():
 
     def predict(self, input_string:str):
         return self.__normalizer.predict(input_string)
+
+
 
 # *****************************************************************
 #
@@ -525,9 +530,12 @@ class GrammarTree():
 
 class GrammarRuleAcceptor():
 
-    def __init__(self, input_grammar, output_grammar, grammar=GRAMMAR_ACC):
+    def __init__(self, input_grammar, output_grammar, grammar=GRAMMAR_ACC, close_type=True):
 
         input_symbols = input_grammar.split()
+        if close_type : 
+            output_grammar = '{-{ '  + output_grammar + ' }-}'
+
         output_symbols = output_grammar.split()
 
         acc = pynini.accep(NULL_TOKEN, token_type=Sig_tex)
@@ -540,9 +548,7 @@ class GrammarRuleAcceptor():
         out_idx = 0
 
         for i, in_symb in enumerate(input_symbols) :
-
             if not(self.__is_grammar_token(in_symb)) :
-                print(in_symb)
                 in_acc = pynini.concat(in_acc, pynini.accep(in_symb, token_type=Sig_tex))
                 in_acc_w = pynini.concat(in_acc_w, pynini.accep(in_symb, token_type=Sig_tex))
             else :
@@ -553,14 +559,17 @@ class GrammarRuleAcceptor():
                         if jk == len(output_symbols) - 1 : 
                             raise Exception(ValueError("There is more grammar rules in input than in output"))
                     else :
-                        if in_symb != out_symb : 
+
+                        if out_symb != '[-rm]' and in_symb != out_symb : 
                             raise Exception(ValueError(f"Cannot cross different grammar type : in:{in_symb} and out:{out_symb}"))
                         grammar_acc = GrammarTree.read_structure(in_symb, grammar).get_fst(grammar)
+                        if out_symb == '[-rm]' : 
+                            grammar_acc = pynini.cross(grammar_acc, pynini.accep(NULL_TOKEN, token_type=Sig_tex))
                         acc = pynini.concat(pynini.concat(acc, pynini.cross(in_acc.optimize(), out_acc.optimize())), grammar_acc)
                         acc_w = pynini.concat(pynini.concat(acc_w, pynini.cross(in_acc_w.optimize(), out_acc.optimize())), grammar_acc)
                         pw = -1
                         if (i != len(input_symbols) - 1 and self.__is_grammar_token(input_symbols[i+1])) or i == len(input_symbols) - 1 : 
-                            pw = 0 
+                            pw = 0
                         in_acc = pynini.accep(NULL_TOKEN, token_type=Sig_tex)
                         in_acc_w = pynini.accep(NULL_TOKEN, token_type=Sig_tex, weight=pw)
                         out_acc = pynini.accep(NULL_TOKEN, token_type=Sig_tex)
@@ -600,7 +609,7 @@ class GrammarRuleAcceptor():
         return res
     
     def __is_grammar_token(self, symb):
-        return (symb[0] == '[' and symb[-1] == ']') or (symb[0] == '[' and symb[-2] == ']' and symb[-1] in GrammarTree.CLOSE_SYMBOLS)
+        return len(symb) >= 2 and ( (symb[0] == '[' and symb[-1] == ']') or (symb[0] == '[' and symb[-2] == ']' and symb[-1] in GrammarTree.CLOSE_SYMBOLS) )
     
 class GrammarRuleTransducer():
 
@@ -633,14 +642,10 @@ class GrammarRuleTransducer():
         if nbest == 1 :
             res = pynini.shortestpath(acceptor @ self.get_fst()).paths(output_token_type = Sig_tex).ostring()
             res = res.replace(SPACE_TOKEN, " ")
-            for keywrd in [' pour ', ' allant_de ', ' à ', ' sur ', ' de '] :
-                res = res.replace(keywrd, '')
             if clean_space : res = " ".join(res.split())
         else : 
             res = list(pynini.shortestpath(acceptor @ self.get_fst(), nshortest=nbest, unique=False).paths(output_token_type=Sig_tex).ostrings())
             res = [hyp.replace(SPACE_TOKEN, " ") for hyp in res]
-            for keywrd in [' pour ', ' allant_de ', ' à ', ' sur ', ' de '] :
-                res = [hyp.replace(keywrd, ' ') for hyp in res]
             if clean_space : res = [" ".join(hyp.split()) for hyp in res]
         return res
     
@@ -654,6 +659,8 @@ class GrammarRuleTransducer():
         D = pynini.determinize(pynini.difference(self.L_star, pynini.concat(self.L_star, pynini.concat(self.__R.copy().project('input'), self.L_star)))).optimize()
         self.__fst = pynini.concat(D, pynini.concat(self.__Rw, D).closure()).optimize()
         self.__update = True
+
+
 
 # *****************************************************************
 #
@@ -679,26 +686,37 @@ class LexGraOneLayerFST():
     def predict(self, input_sentence:str, nbest=1):
         res = self.lexical_fst.predict(input_sentence)
         res = self.grammar_fst.predict(res, nbest=nbest)
+        if nbest == 1 : 
+            for kwrd in TEX_GRAMMAR['grammar_keywords'].keys() :
+                res = res.replace(kwrd, ' ')
+            res = " ".join(res.split())
+        else : 
+            for kwrd in TEX_GRAMMAR['grammar_keywords'].keys() :
+                res = [hyp.replace(kwrd, ' ') for hyp in res]
+            res = [" ".join(hyp.split()) for hyp in res]
         return res
     
     def outputs(self, input_sentence:str):
         res = self.lexical_fst.predict(input_sentence)
         res = self.grammar_fst.outputs(res)
+        for kwrd in TEX_GRAMMAR['grammar_keywords'].keys() : 
+            res = [hyp.replace(kwrd, ' ') for hyp in res]
         return res
     
 class LexGraMultiLayerFST():
     
     def __init__(self, 
-                 math_lex_rule_file=MATH_LEX_KSEQ_RULE_FILE, header=True):
+                 math_lex_rule_file=MATH_LEX_KSEQ_RULE_FILE, layers_files=MATH_GRA_LAYERS, header=True):
 
         self.lexical_fst = LexMathTransducer(math_rule_file=MATH_LEX_KSEQ_RULE_FILE)
         self.grammar = GRAMMAR_ACC.copy()
+        self.num_layers = len(layers_files)
 
         self.layers = []
-        for i in range(4) :
+        for i in range(self.num_layers) :
             new_layer = GrammarRuleTransducer()
             layers_grammar_acceptors = {}
-            with open(MATH_GRA_LAYERS[i], 'r', encoding=ENCODING) as gram_file:
+            with open(layers_files[i], 'r', encoding=ENCODING) as gram_file:
                 for i, line in enumerate(gram_file):
                     if not(header and i == 0) :
                         s = line.split(';')
@@ -717,7 +735,24 @@ class LexGraMultiLayerFST():
         
             self.layers.append(new_layer)
 
-        self.__fst = self.layers[0].get_fst() @ self.layers[1].get_fst() @ self.layers[2].get_fst() @ self.layers[3].get_fst()
+        self.__fst = self.layers[0].get_fst() 
+        for layer in self.layers[1:] :
+            self.__fst = self.__fst @ layer.get_fst()
+        
+        """
+        with open(CORRECT_GRA_LAYER, 'r', encoding=ENCODING) as correct_file :
+            for i, line in enumerate(correct_file):
+                    if not(header and i == 0) :
+                        s = line.split(';')
+                        _in, _out, _type = s[0], s[1], s[2]
+                        new_acceptor = GrammarRuleAcceptor(_in, _out, self.grammar, False)
+                        new_layer.add_grammar_rule(new_acceptor)
+
+        self.__fst = self.__fst @ new_layer.get_fst()
+        
+        """
+        
+        self.__fst = self.__fst.optimize()
 
     def accep(self, input_string:str):
         symbols = input_string.split()
@@ -732,21 +767,25 @@ class LexGraMultiLayerFST():
         if nbest == 1 :
             res = pynini.shortestpath(acceptor @ self.__fst).paths(output_token_type = Sig_tex).ostring()
             res = res.replace(SPACE_TOKEN, " ")
-            for keywrd in [' pour ', ' allant_de ', ' à ', ' sur ', ' de '] :
-                res = res.replace(keywrd, '')
+            for kwrd in TEX_GRAMMAR['grammar_keywords'].keys() :
+                res = res.replace(kwrd, ' ')
             if clean_space : res = " ".join(res.split())
+            return res
         else : 
             res = list(pynini.shortestpath(acceptor @ self.__fst, nshortest=nbest, unique=False).paths(output_token_type=Sig_tex).ostrings())
             res = [hyp.replace(SPACE_TOKEN, " ") for hyp in res]
-            # for keywrd in [' pour ', ' allant_de ', ' à ', ' sur ', ' de '] :
-                # res = [hyp.replace(keywrd, ' ') for hyp in res]
+            for kwrd in TEX_GRAMMAR['grammar_keywords'].keys() : 
+                res = [hyp.replace(kwrd, ' ') for hyp in res]
             if clean_space : res = [" ".join(hyp.split()) for hyp in res]
-        return res
+            return np.unique(res)
     
     def outputs(self, input_sentence:str, clean_space=True):
         res = self.lexical_fst.predict(input_sentence)
         res = self.accep(res)
         res = list((res @ self.__fst).paths(output_token_type = Sig_tex).ostrings())
+        for kwrd in TEX_GRAMMAR['grammar_keywords'].keys() : 
+            res = [hyp.replace(kwrd, ' ') for hyp in res]
         if clean_space : res = [" ".join(hyp.split()) for hyp in res]
-        return res
+        return np.unique(res)
+    
     

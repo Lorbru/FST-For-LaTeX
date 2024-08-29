@@ -1,0 +1,5 @@
+INPUT;OUTPUT;ADD_IN;
+[subexpr] [_];[subexpr] [-rm];correct;
+[supexpr] [^];[supexpr] [-rm];correct;
+[supsubexpr] [^|_];[supsubexpr] [-rm];correct;
+[gram|{-{|}-}];[-rm];correct;

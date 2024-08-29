@@ -1,5 +1,5 @@
 INPUT;OUTPUT;ADD_IN;
-[var|decvar|num] ^ [uop]? [[num|var|decvar|infty|(|)]+] [[bop|[symb]+][[num|var|decvar|infty|(|)]+]]*;[var|decvar|num] ^ { [uop]? [[num|var|decvar|infty|(|)]+] [[bop|[symb]+][[num|var|decvar|infty|(|)]+]]* };supexpr;
-[var|decvar|num] _ [uop]? [[num|var|decvar|infty|(|)]+] [[bop|[symb]+][[num|var|decvar|infty|(|)]+]]*;[var|decvar|num] _ { [uop]? [[num|var|decvar|infty|(|)]+] [[bop|[symb]+][[num|var|decvar|infty|(|)]+]]* };subexpr;
-[var|decvar] [num]+;[var|decvar] _ { [num]+ };subexpr;
-[uop]? [[num|var|decvar|infty|(|)]+] [[bop|[symb]+][[num|var|decvar|infty|(|)]+]]* barre;\overline { [uop]? [[num|var|decvar|infty|(|)]+] [[bop|[symb]+][[num|var|decvar|infty|(|)]+]]* };olexpr;
+[var|decvar] <!>;[var|decvar] !;opvar;
+[var|decvar] <^T>;[var|decvar] ^ T;opvar;
+<!> [<apply>]* [var|decvar];[-rm] [var|decvar] !;opvar;
+<^T> [<apply>]* [var|decvar];[-rm] [var|decvar] ^ T;opvar;

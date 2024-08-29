@@ -1,6 +1,4 @@
 /Data
 /.conda
-ExemplesRapport.ipynb
-GrammarTest.ipynb
-lexmathfst_properties.csv
-Untitled.ipynb
+/csv
+/wav2vec2_checkpoint

@@ -38,12 +38,7 @@ def search_for_models():
 models_types = search_for_models()
 
 def load_model(model_type:str):
-    home_path = os.path.expanduser("~")
-    cache = os.path.join(home_path, '.cache/whisper')
-    if model_type in accepted_models : 
-        if not(model_type in models_types) :  model = whisper.load_model(model_type)
-        else : model =  whisper.load_model(model_type, download_root=os.path.join(cache, '/' + model_type + '.pt'))
-        return model
+    return whisper.load_model(model_type)
   
 st.write(":red[whisper config]")
 

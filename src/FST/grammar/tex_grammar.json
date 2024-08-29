@@ -1,5 +1,5 @@
 {
-    "var_name": {
+    "var": {
         "a": [
             "a"
         ],
@@ -506,7 +506,39 @@
             "var sigma"
         ]
     },
-    "digit": {
+    "dvar": {
+        "dq": [
+            "dq"
+        ],
+        "dr": [
+            "dr"
+        ],
+        "ds": [
+            "ds"
+        ],
+        "dt": [
+            "dt"
+        ],
+        "du": [
+            "du"
+        ],
+        "dv": [
+            "dv"
+        ],
+        "dw": [
+            "dw"
+        ],
+        "dx": [
+            "dx"
+        ],
+        "dy": [
+            "dy"
+        ],
+        "dz": [
+            "dz"
+        ]
+    },
+    "num": {
         "0": [
             "zero",
             "0"
@@ -553,7 +585,7 @@
             "infini"
         ]
     },
-    "sets": {
+    "set": {
         "\\mathbb { N }": [
             "entiers naturels",
             "ensemble des entiers naturels",
@@ -581,6 +613,36 @@
             "ensemble des complexes",
             "ensemble complexe",
             "ensemble grand c"
+        ],
+        "\\mathbb { N } ^ { * }": [
+            "entier strictement positif",
+            "entier naturel non nul"
+        ],
+        "\\mathbb { Z } ^ { * }": [
+            "entier non nul",
+            "relatif non nul"
+        ],
+        "\\mathbb { R } ^ { + }": [
+            "ensemble des reels positifs",
+            "reel positif"
+        ],
+        "\\mathbb { R } ^ { - }": [
+            "ensemble des reels negatifs",
+            "reel negatif"
+        ],
+        "\\mathbb { R } ^ { + } _ { * }": [
+            "ensemble des reels strictement positifs",
+            "ensemble des reels positifs non nuls",
+            "r plus etoile",
+            "reel strictement positif",
+            "reel positif non nul"
+        ],
+        "\\mathbb { R } ^ { - } _ { * }": [
+            "ensemble des reels strictement negatifs",
+            "ensemble des reels negatifs non nuls",
+            "r moins etoile",
+            "reel strictement negatif",
+            "reel negatif non nul"
         ]
     },
     "rel": {
@@ -681,7 +743,7 @@
             "espace"
         ]
     },
-    "quantif": {
+    "qtf": {
         "\\forall": [
             "pour tout"
         ],
@@ -693,30 +755,15 @@
             "existe unique"
         ]
     },
-    "un_op": {
+    "uop": {
         "+": [
             "plus"
         ],
         "-": [
             "moins"
-        ],
-        "\\neg": [
-            "non",
-            "negation",
-            "negation de"
-        ],
-        "\\partial": [
-            "d rond",
-            "d rond de",
-            "derivee partielle",
-            "derivee partielle de"
-        ],
-        "\\nabla": [
-            "gradient",
-            "gradient de"
         ]
     },
-    "bin_op": {
+    "bop": {
         "+": [
             "plus"
         ],
@@ -759,133 +806,176 @@
             "et"
         ]
     },
-    "subscript": {
+    "sub": {
         "_": [
             "indice",
             "underscore"
         ]
     },
-    "supscript": {
+    "sup": {
         "^": [
             "exposant",
             "puissance",
             "supscript"
         ]
     },
-    "func_names": {
-        "\\min": [
-            "minimum",
-            "min"
+    "fun": {
+        "\\deg <apply>": [
+            "deg",
+            "degre"
         ],
-        "\\max": [
-            "maximum",
-            "max"
+        "\\dim <apply>": [
+            "dim",
+            "dimension"
         ],
-        "\\exp": [
+        "\\det <apply>": [
+            "det",
+            "determinant"
+        ],
+        "\\exp <apply>": [
             "exponentielle",
             "exp"
         ],
-        "\\log": [
+        "\\log <apply>": [
             "logarithme",
             "log"
         ],
-        "\\cos": [
+        "\\cos <apply>": [
             "cosinus",
             "cos"
         ],
-        "\\sin": [
+        "\\sin <apply>": [
             "sinus",
             "sin"
         ],
-        "\\arccos": [
+        "\\arccos <apply>": [
             "arccosinus",
             "arc cosinus",
             "arccos",
             "arc cos"
         ],
-        "\\arcsin": [
+        "\\arcsin <apply>": [
             "arcsinus",
             "arc sinus",
             "arcsin",
             "arc sin"
         ],
-        "\\arctan": [
+        "\\arctan <apply>": [
             "arctangente",
             "arc tangente",
             "arctan",
             "arc tan"
         ],
-        "\\deg": [
-            "deg",
-            "degre"
+        "\\mathrm { Re } <apply>": [
+            "partie reelle"
         ],
-        "\\dim": [
-            "dim",
-            "dimension"
-        ],
-        "\\det": [
-            "det",
-            "determinant"
-        ],
-        "\\mathrm { Re }": [
-            "partie relle"
-        ],
-        "\\mathrn { Im }": [
+        "\\mathrm { Im } <apply>": [
             "partie imaginaire"
-        ],
-        "\\mathbb { P }": [
-            "probabilite"
-        ],
-        "\\mathbb { E }": [
-            "esperance"
-        ],
-        "\\mathbb { V }": [
-            "variance"
-        ],
-        "\\mathrm { Ber }": [
-            "loi de bernoulli",
-            "loi bernoulli",
-            "ber"
-        ],
-        "\\mathrm { Bin }": [
-            "loi binomiale",
-            "bin"
-        ],
-        "\\mathcal { G }": [
-            "loi geometrique"
-        ],
-        "\\mathcal { H }": [
-            "loi hypergeometrique"
-        ],
-        "\\mathcal { P }": [
-            "loi de poisson"
-        ],
-        "\\mathcal { N }": [
-            "loi normale"
-        ],
-        "\\mathcal { E }": [
-            "loi exponentielle"
-        ],
-        "\\Gamma": [
-            "loi gamma"
-        ],
-        "\\chi ^ 2": [
-            "chi deux",
-            "khi deux"
-        ],
-        "\\mathcal { T }": [
-            "loi de student"
         ]
     },
-    "iter": {
-        "\\sup": [
+    "specfun": {
+        "\\frac <apply>": [
+            "fraction",
+            "rapport"
+        ],
+        "\\sqrt <apply>": [
+            "racine"
+        ],
+        "\\binom <apply>": [
+            "binomial",
+            "coefficient binomial"
+        ],
+        "\\lVert <apply>": [
+            "norme"
+        ],
+        "\\vert <apply>": [
+            "valeur absolue"
+        ],
+        "\\mathbb { E } <apply>": [
+            "esperance"
+        ],
+        "\\mathbb { P } <apply>": [
+            "probabilite"
+        ],
+        "\\mathbb { V } <apply>": [
+            "variance"
+        ],
+        "\\neg <apply>": [
+            "non",
+            "negation"
+        ],
+        "\\partial <apply>": [
+            "d rond",
+            "derivee partielle"
+        ],
+        "\\nabla <apply>": [
+            "gradient"
+        ]
+    },
+    "setfun": {
+        "\\min <apply>": [
+            "min",
+            "minimum"
+        ],
+        "\\max <apply>": [
+            "max",
+            "maximum"
+        ],
+        "\\mathrm { argmin } <apply>": [
+            "argmin",
+            "arg min",
+            "argument min",
+            "argument minimum"
+        ],
+        "\\mathrm { argmax } <apply>": [
+            "argmax",
+            "arg max",
+            "argument max",
+            "argument maximum"
+        ],
+        "\\sup <apply>": [
             "sup",
             "borne superieure"
         ],
-        "\\inf": [
+        "\\inf <apply>": [
             "inf",
             "borne inferieure"
+        ]
+    },
+    "law1": {
+        "\\mathrm { Ber } <apply>": [
+            "loi de bernoulli",
+            "bernoulli",
+            "ber"
         ],
+        "\\mathcal { G } <apply>": [
+            "loi geometrique"
+        ],
+        "\\mathcal { P } <apply>": [
+            "loi de poisson",
+            "loi poisson"
+        ],
+        "\\mathcal { E } <apply>": [
+            "loi exponentielle"
+        ],
+        "\\Chi ^ 2 <apply>": [
+            "chi deux",
+            "khi deux"
+        ]
+    },
+    "law2": {
+        "\\mathcal { N } <apply>": [
+            "loi normale"
+        ],
+        "\\mathrm { Bin } <apply>": [
+            "loi binomiale",
+            "bin"
+        ],
+        "\\matrhm { Gamma } <apply>": [
+            "loi gamma"
+        ]
+    },
+    "iter": {
         "\\lim": [
             "lim",
             "limite"
@@ -910,39 +1000,6 @@
         ],
         "\\int": [
             "integrale"
-        ],
-        "\\mathrm { argmin }": [
-            "argmin",
-            "arg min",
-            "minimiseur"
-        ],
-        "\\mathrm { argmax }": [
-            "argmax",
-            "arg max",
-            "maximiseur"
-        ]
-    },
-    "func_cseq": {
-        "\\frac": [
-            "fraction",
-            "rapport"
-        ],
-        "\\sqrt": [
-            "racine"
-        ],
-        "\\binom": [
-            "binomial",
-            "coefficient binomial"
-        ],
-        "\\lVert": [
-            "norme"
-        ],
-        "\\rVert": [
-            "fermer la norme",
-            "fin de la norme"
-        ],
-        "\\|": [
-            "valeur absolue"
         ]
     },
     "symb": {
@@ -957,18 +1014,6 @@
         ",": [
             "virgule"
         ],
-        "'": [
-            "apostrophe",
-            "prime"
-        ],
-        "^ *": [
-            "etoile",
-            "star"
-        ],
-        "!": [
-            "point d' exclamation",
-            "factoriel"
-        ],
         "?": [
             "point d' interrogation"
         ],
@@ -981,7 +1026,7 @@
             "barre verticale"
         ]
     },
-    "math_cseq": {
+    "mseq": {
         "(": [
             "parenthese"
         ],
@@ -1012,7 +1057,7 @@
             "fin ensemble"
         ]
     },
-    "tex_cseq": {
+    "tseq": {
         "{": [
             "accolade"
         ],
@@ -1024,7 +1069,7 @@
             "fin accolade"
         ]
     },
-    "natural_expr": {
+    "naturalexpr": {
         "\\geq 0": [
             "positif"
         ],
@@ -1041,85 +1086,79 @@
             "egal par definition",
             "defini par"
         ],
-        "\\mathbb { N } ^ *": [
-            "entier strictement positif",
-            "entier naturel non nul"
+        "^ 2": [
+            "carre"
         ],
-        "\\mathbb { Z } ^ *": [
-            "entier non nul",
-            "relatif non nul"
-        ],
-        "\\mathbb { R } ^ +": [
-            "ensemble des reels positifs",
-            "reel positif"
-        ],
-        "\\mathbb { R } ^ -": [
-            "ensemble des reels negatifs",
-            "reel negatif"
-        ],
-        "\\mathbb { R } ^ + _ *": [
-            "ensemble des reels strictement positifs",
-            "ensemble des reels positifs non nuls",
-            "r plus etoile",
-            "reel strictement positif",
-            "reel positif non nul"
-        ],
-        "\\mathbb { R } ^ - _ *": [
-            "ensemble des reels strictement negatifs",
-            "ensemble des reels negatifs non nuls",
-            "r moins etoile",
-            "reel strictement negatif",
-            "reel negatif non nul"
+        "^ 3": [
+            "cube"
         ],
         "\\mathcal { N } ( 0 , 1 )": [
             "loi normale centree reduite",
             "loi standard",
             "loi n zero un"
-        ]
-    },
-    "other": {
-        "\\text { resp. }": [
+        ],
+        "\\quad \\text { resp. } \\quad": [
             "respectivement"
         ]
     },
-    "key_seq": {
-        "pour": [
-            "pour"
-        ],
-        "allant_de": [
-            "allant de"
-        ],
-        "\u00e0": [
-            "\u00e0"
-        ],
-        "de": [
-            "de"
-        ],
-        "sur": [
-            "sur"
-        ],
-        "tout_sur": [
-            "le tout sur",
-            "tout sur"
-        ],
-        "facteur_de": [
-            "facteur de"
-        ],
-        "tout_facteur_de": [
-            "le tout facteur de",
-            "tout facteur de"
-        ],
-        "chapeau": [
+    "gkey": {
+        "\\limits": [],
+        "\\tilde": [],
+        "\\overline": [],
+        "\\hat": [],
+        "\\vec": [],
+        "\\left": [],
+        "\\right": [],
+        "\\rVert": [],
+        "\\,": []
+    },
+    "grammar_keywords": {
+        "<hat>": [
             "chapeau"
         ],
-        "tilde": [
+        "<tilde>": [
             "tilde"
         ],
-        "barre": [
+        "<^*>": [
+            "etoile"
+        ],
+        "<vec>": [
+            "vecteur"
+        ],
+        "<'>": [
+            "apostrophe",
+            "prime"
+        ],
+        "<underset>": [
+            "pour"
+        ],
+        "<from>": [
+            "allant de"
+        ],
+        "<to>": [
+            "\u00e0"
+        ],
+        "<apply>": [
+            "de"
+        ],
+        "<over>": [
+            "sur"
+        ],
+        "<fact>": [
+            "facteur",
+            "facteur de"
+        ],
+        "<overline>": [
             "barre"
         ],
-        "vecteur": [
-            "vecteur"
-        ]
+        "<!>": [
+            "point d' exclamation",
+            "factoriel"
+        ],
+        "<^T>": [
+            "transpose"
+        ],
+        "{-{": [],
+        "}-}": []
     }
 }
