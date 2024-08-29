@@ -2,7 +2,7 @@
 
 ## Intro
 
-Le projet constitue un prototype expérimental de génération de code LaTeX par usage de la parole (réalisé en français) composé d'une utilisation hybride d'un grand modèle de reconnaissance de la parole (ASR - Whisper from OpenAI) suivie d'une architecture de transduction à états finis permettant la conversion du langage naturel vers une séquence de code LaTeX. Cela permet au locuteur de pouvoir préserver une locution naturelle pour la dictée d'équations.
+Prototype expérimental de génération de code LaTeX par usage de la parole (réalisé en français) composé d'une utilisation hybride d'un grand modèle de reconnaissance de la parole (ASR - Whisper from OpenAI) suivi d'une architecture de transduction à états finis permettant la conversion du langage naturel vers une séquence de code LaTeX. Cela permet au locuteur de pouvoir préserver une locution naturelle pour la dictée d'équations.
 
 ## Dépendances
 
