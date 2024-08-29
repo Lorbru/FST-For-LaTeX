@@ -8,9 +8,7 @@ import whisper
 from src.FST.transducers import *
 
 
-c1, c2, c3 = st.columns(3, gap='large')
-with c2 :
-    st.title(':red[TaL]:blue[eX]')
+st.title('Génération de code LaTeX par usage de la parole')
 
 accepted_models = ['base', 'small', 'medium']
 
@@ -30,13 +28,6 @@ if not 'Lex_Gram4_FST' in st.session_state :
 st.write("___")
 st.subheader(":orange[Configuration]")
 
-def search_for_models():
-    home_path = os.path.expanduser("~")
-    cache = os.path.join(home_path, '.cache/whisper')
-    return [s.split('.')[0] for s in os.listdir(cache)]
-
-models_types = search_for_models()
-
 def load_model(model_type:str):
     return whisper.load_model(model_type)
   
@@ -48,7 +39,7 @@ with c1 :
     select_model = st.selectbox("Whisper model size", accepted_models)
 
 with c2 :
-    if st.button('Load model'):
+    if st.button('Load ASR'):
         st.session_state.model = load_model(select_model)
 
 st.write(":red[FST config]")
@@ -59,10 +50,14 @@ if st.session_state.Lex_FST == None : st.session_state.Lex_FST = LexMathTransduc
 if st.session_state.Lex_Gram_FST == None : st.session_state.Lex_Gram_FST = LexGraOneLayerFST()
 if st.session_state.Lex_Gram4_FST == None : st.session_state.Lex_Gram4_FST = LexGraMultiLayerFST()
   
-if st.button("Reload FSTs"):
-    st.session_state.Lex_FST = LexMathTransducer()
-    st.session_state.Lex_Gram_FST = LexGraOneLayerFST()
-    st.session_state.Lex_Gram4_FST = LexGraMultiLayerFST()
+if st.button("Load FST"):
+    if select_transducer == "lex" : st.session_state.Lex_FST = LexMathTransducer()
+    elif select_transducer == "lex + gram" : st.session_state.Lex_Gram_FST = LexGraOneLayerFST()
+    elif select_transducer == "lex + gram4" : st.session_state.Lex_Gram4_FST = LexGraMultiLayerFST()
+
+if select_transducer == "lex" : FST = st.session_state.Lex_FST 
+elif select_transducer == "lex + gram" : FST = st.session_state.Lex_Gram_FST
+elif select_transducer == "lex + gram4" : FST = st.session_state.Lex_Gram4_FST
 
 st.write("___")
 st.subheader(":orange[Demo]")
@@ -80,7 +75,7 @@ if len(audio) > 0:
     # To get audio properties, use pydub AudioSegment properties:
     st.write(f"Sample rate: {audio.frame_rate}, Frame width: {audio.frame_width}, Duration: {audio.duration_seconds} seconds")
 
-    if st.session_state.FST != None and st.session_state.model != None :
+    if FST != None and st.session_state.model != None :
 
         transcript = st.session_state.model.transcribe('audio.wav')['text']
         
@@ -134,4 +129,8 @@ if len(audio) > 0:
                 with b :
                     for hyp in result[1:]:
                         st.write('$' + hyp + '$')
+
+    else :
+
+        st.write(":red[>> Choisir un modèle ASR")
 
