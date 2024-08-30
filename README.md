@@ -16,8 +16,8 @@ Prototype expérimental de génération de code LaTeX par usage de la parole (r�
 
 **Paramétrer la taille du modèle de reconnaissance de la parole à charger et le type de transducteur :**
 
-![alt text](image.png)
+![alt text](img_001.png)
 
 **Enregistrer l'équation et observer le résultat de retranscription :**
 
-![alt text](image-1.png)
+![alt text](img_002.png)
