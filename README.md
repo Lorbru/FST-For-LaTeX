@@ -1,4 +1,4 @@
-# ASR et transducteurs pour la génération automatiuque de code LaTeX par la parole
+# ASR et transducteurs pour la génération automatique de code LaTeX par la parole
 
 ## Intro
 
